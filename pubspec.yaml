@@ -1,7 +1,7 @@
 name: draughts_engine
 description: "International draughts (10x10) engine with FMJD-style tournament rules, FEN-compatible with draughts.js."
 version: 0.0.1
-homepage:
+homepage: "https://github.com/jerrymfon14/draughts_engine.git"
 
 environment:
   sdk: ^3.8.1
