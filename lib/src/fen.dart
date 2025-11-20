@@ -9,7 +9,7 @@ import 'piece.dart';
 class DraughtsFen {
   static const int boardSize = 50;
 
-  /// Parse FEN => (turn, Map<square,Piece>)
+  /// Parse FEN => (turn, Map`<square,Piece>`)
   static (PieceColor turn, Map<int, Piece> pieces) load(String fen) {
     fen = fen.trim();
     if (!fen.contains(':')) {
@@ -86,11 +86,17 @@ class DraughtsFen {
 
     pieces.forEach((sq, piece) {
       if (piece.color == PieceColor.white) {
-        if (piece.type == PieceType.man) whiteMen.add(sq);
-        else whiteKings.add(sq);
+        if (piece.type == PieceType.man) {
+          whiteMen.add(sq);
+        } else {
+          whiteKings.add(sq);
+        }
       } else {
-        if (piece.type == PieceType.man) blackMen.add(sq);
-        else blackKings.add(sq);
+        if (piece.type == PieceType.man) {
+          blackMen.add(sq);
+        } else {
+          blackKings.add(sq);
+        }
       }
     });
 
